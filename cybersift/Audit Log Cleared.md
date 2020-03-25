@@ -1,7 +1,10 @@
 # Audited Log Cleared
 ### Description
-The audit log was cleared. 
+
+The audit log was cleared.
+
 -------------------
+
 ### Severity
 Low
 
@@ -12,6 +15,9 @@ Low
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1102#security-monitoring-recommendations
 
 -------------------
+
 ### Supported Log Sources
+
 - windows security
+
 -------------------
