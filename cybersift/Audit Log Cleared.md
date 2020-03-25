@@ -1,47 +1,17 @@
-# Audit Log Cleared
-### The audit log was cleared. 
-
-=> Insert a (brief) description here <=
-
+# Alert Title
+### Description
+The audit log was cleared. 
 -------------------
 ### Severity
-
-=> Should be one of: <=
-
-- Critical
-- High
-- Medium
-- Low
-- Info
-
--------------------
-### Detailed Information
-
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
-
--------------------
-### Possible causes of false positives
-
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+Low
 
 -------------------
 ### References
 
-=> List of links and external sources which support the information for this alert. Any applicable [MITRE](https://attack.mitre.org/) information should be added here as well <=
+- https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor 
+- https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1102#security-monitoring-recommendations
 
 -------------------
 ### Supported Log Sources
-
-=> Insert supported log sources here, for example: <=
-- windows application
 - windows security
-- firewall
-
 -------------------
