@@ -1,4 +1,4 @@
-# Alert Title
+# Audited Log Cleared
 ### Description
 The audit log was cleared. 
 -------------------
