@@ -9,17 +9,20 @@ This rule detects a DHCP server in which a specified Callout DLL (in registry) w
 - Critical
 
 -------------------
-<!---
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Microsoft DHCP Server takes the following steps in loading third-party DLLs:
 
--------------------
---->
+1. Microsoft DHCP Server checks the previously defined registry location for the presence of third-party DLLs.
+
+2. If no registry entries are found, the DHCP Server internal hook table remains empty, and no DHCP Server event notifications are sent.
+
+3. If one or more registry entries is found, Microsoft DHCP Server reads the first registry entry, in alphabetical order, and attempts to load the corresponding third-party DLL. If the DLL loads successfully, Microsoft DHCP Server ceases checking for additional third-party DLLs.
+
+4. Microsoft DHCP Server calls the DhcpServerCalloutEntry function in the loaded third-party DLL, retrieving the associated DHCP_CALLOUT_TABLE function and thereby determining which events initiate notification to the third-party DLL. Notification comes in the form of corresponding third-party functions: one or more of which can be included in the third-party DLL, and each of which are defined in the following DHCP Server API reference pages.
+
+This event fires if, on step 3, the DLL is loaded succesfully;
+
 ### Possible causes of false positives
 
 - Unknown
