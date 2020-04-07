@@ -9,17 +9,13 @@ Detects backup catalog deletions.
 - Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+"Wbadmin delete catalog", deletes the backup catalog that is stored on the local computer. Use this command when the backup catalog has been corrupted and you cannot restore it using wbadmin restore catalog.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
