@@ -9,17 +9,12 @@ A rare event has been detected in SWIFT logs.
 High
 
 -------------------
-<!---
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+This event is triggered by a SWIFT operation that is statistically anomalous or otherwise uncommon or unusual.
+This is based on the SWIFT event ID in the event itself.
 
 -------------------
---->
 ### Possible causes of false positives
 
 - Unknown
