@@ -9,28 +9,21 @@ Detect remote login by Administrator user depending on internal pattern
 Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+A remote desktop logon, through RDP, may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.
 
 -------------------
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- Legitimate administrative activity
 
 -------------------
---->
+
 ### References
 
-=> List of links and external sources which support the information for this alert. Any applicable [MITRE](https://attack.mitre.org/) information should be added here as well <=
+- https://car.mitre.org/wiki/CAR-2016-04-005
 
 -------------------
 ### Supported Log Sources
