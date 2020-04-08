@@ -9,17 +9,11 @@ This rule detects a DNS server error in which a specified plugin DLL (in registr
 - Critical
 
 -------------------
-<!---
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Placing a malicious DLL on a network path which is accessible by one of the domain controllers’ computer accounts, dns.exe, which runs under SYSTEM can be made to load the DLL, and we thus can run code as SYSTEM on a domain controller, thus taking control of the domain.
 
 -------------------
---->
 ### Possible causes of false positives
 
 - Unknown
