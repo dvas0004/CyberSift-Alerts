@@ -10,17 +10,13 @@ Apply this Sigma Use Case on your windows server logs and not on your DC logs.
 - Low
 
 -------------------
-<!---
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+By monitoring the Event Log 4720 on non domain controller, we are able to detect user creation.
+In An Active Directory environment, only the domain controller should be associated with these events.
+This rule monitors for events with ID 4720 indicating the creation of a local user account.
 
 -------------------
---->
 ### Possible causes of false positives
 
 - Domain Controller Logs
