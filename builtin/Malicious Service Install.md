@@ -9,17 +9,24 @@ This method detects well-known keywords of malicious services in the Windows Sys
 - High
 
 -------------------
-<!---
 ### Detailed Information
+On Windows Event ID: 7045 (Installation of Services); rule triggers on services with names: 
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+  -'WCESERVICE'
+  -'WCE SERVICE'
+  -'pwdump*'
+  -'gsecdump*'
+  -'cachedump*'
+
+or having filenames:
+  -'*\PAExec*'
+  -'winexesvc.exe*'
+  -'*\DumpSvc.exe'
+  -'mssecsvc2.0'
+  -'* net user *'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 -Unknown, unlikely
