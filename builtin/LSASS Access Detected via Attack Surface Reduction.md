@@ -11,6 +11,7 @@ High
 -------------------
 ### Detailed Information
 
+LSASS is a Windows process responsible for enforcing the security policy of the system, verifying users' credentials and issuing access tokens. Attempts to access it may be a sign of malicious activity. 
 Definitions
   - 'Requirements:Enabled Block credential stealing from the Windows local security authority subsystem (lsass.exe) from Attack Surface Reduction (GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2)'
 
