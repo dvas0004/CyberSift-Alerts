@@ -18,7 +18,7 @@ Fires on the following Windows Log Event IDs :
   - 4769
   - 4771
 
-Failure Codes:
+With the following Kerberos Failure Codes:
   - '0x9'
   - '0xA'
   - '0xB'
@@ -59,7 +59,7 @@ Failure Codes:
 -------------------
 ### References
 
-=> List of links and external sources which support the information for this alert. Any applicable [MITRE](https://attack.mitre.org/) information should be added here as well <=
+- https://www.ultimatewindowssecurity.com/securitylog/book/page.aspx?spid=chapter4
 
 -------------------
 ### Supported Log Sources
