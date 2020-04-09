@@ -28,11 +28,11 @@ may help to detect lateral movement and remote exec using named pipes.
 -------------------
 ### References
 
-=> List of links and external sources which support the information for this alert. Any applicable [MITRE](https://attack.mitre.org/) information should be added here as well <=
+- https://twitter.com/menasec1/status/1104489274387451904
 
 -------------------
 ### Supported Log Sources
 
-- https://twitter.com/menasec1/status/1104489274387451904
+- Windows Security
 
 -------------------
