@@ -8,16 +8,13 @@ Detects scenario where if a user is assigned the SeEnableDelegationPrivilege rig
 
 High
 
-<!---
 -------------------
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
---->
+SeEnableDelegationPrivilege allows an account to delegate access to containers and subtrees to other users and groups.
+In an Active Directory environment, only the domain controller should have this privilege.
+If we control an object that has SeEnableDelegationPrivilege in the domain, AND said object has GenericAll/GenericWrite rights over any other user object in the domain, we can compromise the domain at will, indefinitely.
+
 -------------------
 ### Possible causes of false positives
 
