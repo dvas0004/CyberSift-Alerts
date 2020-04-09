@@ -9,17 +9,13 @@ Detection for mshta.exe suspicious execution patterns sometimes involving file p
 - High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+mshta.exe is used to execute "HTML Applications"; html documents with embedded scripts in VBScript or Javascript which may be used to execute commands in an environment where Powershell/cmd are disabled.
+mshta.exe may thus be a sign of malicious code execution or lateral movement of an attacker.
 
 -------------------
---->
 ### Possible causes of false positives
 
 - False positives depend on scripts and administrative tools used in the monitored environment
