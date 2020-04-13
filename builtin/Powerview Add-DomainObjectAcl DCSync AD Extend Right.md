@@ -10,25 +10,26 @@ will allow to re-obtain the pwd hashes of any user/computer
 Critical
 
 -------------------
-<!---
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 5136 (Directory Service Object Was Modified)
 
+LDAP Display Name: 
+  nTSecurityDescriptor
+  
+Values (nTSecurityDescriptor:
+  - '*1131f6ad-9c07-11d1-f79f-00c04fc2dcd2*'
+  - '*1131f6aa-9c07-11d1-f79f-00c04fc2dcd2*'
+
+  
 -------------------
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- New Domain Controller computer account, check user SIDs witin the value attribute of event 5136 and verify if it's a regular user or DC computer account.
 
 -------------------
---->
+
 ### References
 
 - https://twitter.com/menasec1/status/1111556090137903104
