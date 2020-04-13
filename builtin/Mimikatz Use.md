@@ -11,6 +11,7 @@ This method detects mimikatz keywords in different Eventlogs.
 -------------------
 ### Detailed Information
 
+Detects keywords that denote the use of the Mimikatz pentesting tool in event logs.
 Keywords:
   - "* mimikatz *"
   - "* mimilib *"
@@ -24,18 +25,17 @@ Keywords:
 -------------------
 ### Possible causes of false positives
 
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- Naughty administrators
+- Penetration test
 
 -------------------
 ### References
-    - Naughty administrators
-    - Penetration test
+
+  - https://www.ethicalhackers.co.za/post/mimikatz_cheatsheet/
     
 -------------------
 ### Supported Log Sources
 
-- windows
+- Windows
 
 -------------------
