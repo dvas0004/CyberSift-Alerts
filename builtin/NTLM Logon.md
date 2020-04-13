@@ -9,17 +9,13 @@ Detects logons using NTLM, which could be caused by a legacy source or attackers
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Active directory logons should be through Kerberos on modern systems. NTLM authentication could be a sign of a downgrade attack.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Legacy hosts
@@ -33,6 +29,6 @@ Detects logons using NTLM, which could be caused by a legacy source or attackers
 -------------------
 ### Supported Log Sources
 
-- windows ntlm
+- Windows NTLM
 
 -------------------
