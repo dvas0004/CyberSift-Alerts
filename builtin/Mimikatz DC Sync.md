@@ -16,9 +16,9 @@ Allows detection of the DCSync command from Mimikatz; used to impersonate a Doma
 
 Triggered on detection of the following events from any users with SIDs not having the SID authority of NT Authority\
 
--4624 Succesful login attempt.
--4742 Computer Account is changed.
--4662 User accesses an active directory object.
+  - 4624 Succesful login attempt.
+  - 4742 Computer Account is changed.
+  - 4662 User accesses an active directory object.
 
 -------------------
 
