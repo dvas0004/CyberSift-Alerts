@@ -9,17 +9,13 @@ Detects post exploitation using NetNTLM downgrade attacks.
 - Critical
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+LM password hashes are trivial to crack; they are therefore disabled on modern Windows systems (2000 onwards) but may still be usable by malicious attackers using a downgrade attack. 
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
