@@ -10,17 +10,16 @@ Detects a possible remote NTLM hash change through SAMR API SamiChangePasswordUs
 - Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 5145 Network Share Object Accessed
+  - 4738 User Account Was Changed
+
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
