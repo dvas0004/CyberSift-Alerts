@@ -9,17 +9,20 @@ Detects renaming of file while deletion with SDelete tool.
 - Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+EventID:
+  - 4656 A handle to an object was requested.
+  - 4663 An attempt was made to access an object
+  - 4658 The handle to an object was closed
+
+Triggers when file is renamed to:
+  - '*.AAA'
+  - '*.ZZZ'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Legitime usage of SDelete
