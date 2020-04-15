@@ -9,17 +9,20 @@ Detects rare scheduled tasks creations that only appear a few times per time fra
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 4698 Scheduled Task Creation
+
+timeframe: 7d
+
+condition: selection | count() by TaskName < 5 
+ 
+Triggers on a rare scheduled task being scheduled more than 5 times in a 7 Day timeframe.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Software installation
