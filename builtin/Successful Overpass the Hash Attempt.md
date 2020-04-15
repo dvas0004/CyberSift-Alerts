@@ -9,17 +9,17 @@ Detects successful logon with logon type 9 (NewCredentials) which matches the Ov
 - High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events
+  - 4624 Succesful account log on.
+
+Triggers on logon type: 9 - New Credentials (https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4624) with logon process name: 'seclogo'.
+
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Runas command-line tool using /netonly parameter
