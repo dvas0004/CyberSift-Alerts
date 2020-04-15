@@ -10,21 +10,25 @@ this rule helps to filter out the noise if psexec is used for legit purposes or 
 - High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
-
+Events:
+  - 5145 A network share object was checked to see whether client can be granted desired access
+  
+Triggers on:
+  - Share name fitting pattern '\\*\IPC$'
+  - Target Name fitting: '*-stdin' or '*-stdout' or '*-stderr'
+or:
+  - Share name fitting pattern '\\*\IPC$'
+  - Target name fitting: 'PSEXESVC*'
+  
 -------------------
---->
+
 ### Possible causes of false positives
 
--None observed so far.
--Unknown
+  - None observed so far.
+  - Unknown
 
 -------------------
 ### References
