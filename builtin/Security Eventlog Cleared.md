@@ -9,17 +9,17 @@ Some threat groups tend to delete the local 'Security' Eventlog using certain ut
 - High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 517 The audit log was cleared.
+  - 1102 The audit log was cleared.
+
+Triggers when security event log is cleared.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Rollout of log collection agents (the setup routine often includes a reset of the local Eventlog)
