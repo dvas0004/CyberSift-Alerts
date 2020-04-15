@@ -10,17 +10,16 @@ Detects rare service installs that only appear a few times per time frame and co
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 7045 New Service Was Installed
+
+Service with rare filename was installed more than 5 times in a 7 day period.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Software installation
