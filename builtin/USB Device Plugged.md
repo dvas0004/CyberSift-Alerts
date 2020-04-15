@@ -9,17 +9,17 @@ Detects plugged USB devices.
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Detects USB devices plugged in via the following events:
+
+  - 2003  # Loading drivers
+  - 2100  # Pnp or power management
+  - 2102  # Pnp or power management
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Legitimate administrative activity
