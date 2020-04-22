@@ -9,7 +9,7 @@ A user account has been locked out.
 Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
 - Why is this alert triggered?
@@ -19,11 +19,12 @@ Low
 - Any supporting visualizations to get more information?
 
 -------------------
---->
+
 ### Possible causes of false positives
 
-- Unknown
-
+Event IDs:
+  - 4740 A user account was locked out.
+  
 -------------------
 ### References
 
