@@ -9,25 +9,25 @@ Detects the attack technique pass the hash which is used to move laterally insid
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
-
+Events:
+  - 4624 An account was successfully logged on.
+    - Security ID: NULL 
+    - Logon Type: 3 (Network) AND Logon Process Name: NtLmSsp
+    - Logon Type: 9 (Process run using RunAs command to run as another user using the /netonly option) 
+      AND Logon Process Name: seclogo
+    
 -------------------
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
 - Joining a PC to a domain
 - Large file upload
 - Shared infrastructure (CDN)
 
 -------------------
---->
+
 ### References
 
 - https://github.com/iadgov/Event-Forwarding-Guidance/tree/master/Events
