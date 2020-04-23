@@ -9,25 +9,21 @@ A replay attack was detected. May be a harmless false positive due to misconfigu
 High
 
 -------------------
-<!---
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 4649 Replay Attack detected.
+
+Event generates on domain controllers when KRB_AP_ERR_REPEAT Kerberos response was sent to the client.
 
 -------------------
+
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- Misconfigured network device between the client and server that could send the same packet(s) repeatedly.
 
 -------------------
---->
+
 ### References
 
 - https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor 
