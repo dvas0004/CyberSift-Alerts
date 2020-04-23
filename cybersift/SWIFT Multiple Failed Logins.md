@@ -22,7 +22,7 @@ High
 --->
 ### Possible causes of false positives
 
-- None
+- User forgotten their password.
 
 -------------------
 ### References
