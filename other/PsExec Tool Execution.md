@@ -9,20 +9,17 @@ Detects PsExec service installation and execution events (service and Sysmon).
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 7045: A new service was installed in the system (Service Name: PSEXESVC, Service Path: *\PSEXESVC.exe)
+  - 7037 Service enters the "running/stopped" state. (Service Name: PSEXESVC)
 
 -------------------
---->
+
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
 - Joining a PC to a domain
 - Large file upload
 - Shared infrastructure (CDN)
