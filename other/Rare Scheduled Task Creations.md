@@ -10,17 +10,16 @@ The aggregation and count function selects tasks with rare names.
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 106 General Task Registration
+
+Triggers on detection of the above event for the same Task name 5 times or more within a 7 day period.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Software installation
