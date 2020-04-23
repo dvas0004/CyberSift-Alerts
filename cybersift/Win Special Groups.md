@@ -6,30 +6,24 @@ Special groups have been assigned to a new logon.
 -------------------
 ### Severity
 
-=> Should be one of: <=
-
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 4964 Special groups have been assigned to a new logon
+
+The Special Groups feature lets the administrator find out when a member of a certain group logs on to the computer. The Special Groups feature lets an administrator set a list of group security identifiers (SIDs) in the registry.
 
 -------------------
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- None
 
 -------------------
---->
+
 ### References
 
 - https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor
