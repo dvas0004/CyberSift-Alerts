@@ -18,10 +18,7 @@ Events:
 -------------------
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- None
 
 -------------------
 
