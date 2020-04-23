@@ -9,14 +9,11 @@ SID History was added to an account.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 4765 SID History was added to an account.
 
 -------------------
 ### Possible causes of false positives
@@ -27,7 +24,7 @@ High
 - Shared infrastructure (CDN)
 
 -------------------
---->
+
 ### References
 
 - https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor 
