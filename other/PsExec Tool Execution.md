@@ -20,9 +20,7 @@ Events:
 
 ### Possible causes of false positives
 
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+- Unknown
 
 -------------------
 ### References
