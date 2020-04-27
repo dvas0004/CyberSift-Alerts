@@ -9,17 +9,19 @@ Detects Base64 encoded Shellcode.
 - Critical
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Event
+  - 4104 Execute Remote Command
+  
+ Triggers on the following Base64 sequences:
+  - '*AAAAYInlM*'
+  - '*OiCAAAAYInlM*'
+  - '*OiJAAAAYInlM*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
