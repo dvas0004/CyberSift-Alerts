@@ -9,29 +9,24 @@ Detects usage of cmdkey to look for cached credentials.
 - Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers On Command Line Instructions:
+  - *\cmdkey.exe * /list *
 
 -------------------
---->
+
 ### Possible causes of false positives
 
-=> What could cause this alert to mistakenly get generated? For example: <=
-- Joining a PC to a domain
-- Large file upload
-- Shared infrastructure (CDN)
+ - Legitimate administrative tasks.
 
 -------------------
 ### References
 
-- Legitimate administrative tasks.
-
+  - https://www.peew.pw/blog/2017/11/26/exploring-cmdkey-an-edge-case-for-privilege-escalation
+  - https://technet.microsoft.com/en-us/library/cc754243(v=ws.11).aspx
+  
 -------------------
 ### Supported Log Sources
 
