@@ -9,17 +9,23 @@ Detects javaw.exe in AppData folder as used by Adwind / JRAT.
 - High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Events:
+  - 11 File Create
+    Triggers On Files Created With Names:
+      - '*\AppData\Roaming\Oracle\bin\java*.exe'
+      - '*\Retrive*.vbs
+  
+  - 13 Registry Value Set
+    Triggers On Setting Registry Keys Fitting:
+      - \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run*
+    With Values Fitting:  
+      - %AppData%\Roaming\Oracle\bin\\*
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
