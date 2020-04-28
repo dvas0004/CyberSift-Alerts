@@ -9,17 +9,17 @@ Detects execution of renamed paexec via imphash and executable product string.
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on Executable having one of the following md5 hashes:
+  - 11D40A7B7876288F919AB819CC2D9802
+  - 6444f8a34e99b8f7d9647de66aabe516
+  - dfd6aa3f7b2b1035b76b718f1ddc689f
+  - 1a6cca4d5460b1710a12dea39e4a592c
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown imphashes
