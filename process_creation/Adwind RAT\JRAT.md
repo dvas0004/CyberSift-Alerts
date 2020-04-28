@@ -23,6 +23,11 @@ Events:
       - \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run*
     With Values Fitting:  
       - %AppData%\Roaming\Oracle\bin\\*
+      
+  - Process Creation
+    Triggers on Processes Created With Names Fitting:
+      - '*\AppData\Roaming\Oracle*\java*.exe *'
+      - '*cscript.exe *Retrive*.vbs *'
 
 -------------------
 
