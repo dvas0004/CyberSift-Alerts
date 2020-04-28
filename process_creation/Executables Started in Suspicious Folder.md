@@ -9,17 +9,28 @@ Detects process starts of binaries from a suspicious folder.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on execution of binaries from the following folders:
+  - C:\PerfLogs\\*
+  - C:\$Recycle.bin\\*
+  - C:\Intel\Logs\\*
+  - C:\Users\Default\\*
+  - C:\Users\Public\\*
+  - C:\Users\NetworkService\\*
+  - C:\Windows\Fonts\\*
+  - C:\Windows\Debug\\*
+  - C:\Windows\Media\\*
+  - C:\Windows\Help\\*
+  - C:\Windows\addins\\*
+  - C:\Windows\repair\\*
+  - C:\Windows\security\\*
+  - '*\RSA\MachineKeys\\*'
+  - C:\Windows\system32\config\systemprofile\\*
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
