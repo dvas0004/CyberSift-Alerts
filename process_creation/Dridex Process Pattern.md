@@ -9,17 +9,21 @@ Detects typical Dridex process patterns.
 - Critical
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on the following command line patterns:
+  - *\svchost.exe C:\Users\\*\Desktop\\*
+
+or
+
+  - '*whoami.exe /all'
+  - '*net.exe view'
+
+Having svchost.exe as a parent process.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unlikely, unknown.
