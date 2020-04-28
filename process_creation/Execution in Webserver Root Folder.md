@@ -13,14 +13,14 @@ Medium
 ### Detailed Information
 
 Triggers on execution from one of the following folders:
-  - '*\wwwroot\\*'
-  - '*\wmpub\\*'
-  - '*\htdocs\\*'
+  - *\wwwroot\\*
+  - *\wmpub\\*
+  - *\htdocs\\*
   
 Unless folder path also fits fitting the following:
-  - '*bin\\*'
-  - '*\Tools\\*'
-  - '*\SMSComponent\\*'
+  - *bin\\*
+  - *\Tools\\*
+  - *\SMSComponent\\*
 
 -------------------
 
