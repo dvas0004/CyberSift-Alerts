@@ -1,7 +1,7 @@
 # Detection of PowerShell Execution via DLL
 ### Description
 
-Detects PowerShell Strings applied to rundllas seen in PowerShdll.dll
+Detects PowerShell Strings applied to rundll as seen in PowerShdll.dll
 
 -------------------
 ### Severity
@@ -9,20 +9,18 @@ Detects PowerShell Strings applied to rundllas seen in PowerShdll.dll
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on rundll32.exe being used to run Powershell commands (via Powershdll.dll) with the following Powershell strings:
+  - '*Default.GetString*'
+  - '*FromBase64String*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
-- Unknown
+
 
 -------------------
 ### References
