@@ -9,17 +9,21 @@ Detects a suspicious program execution in a web service root folder (filter out 
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on execution from one of the following folders:
+  - '*\wwwroot\\*'
+  - '*\wmpub\\*'
+  - '*\htdocs\\*'
+  
+Unless folder path also fits fitting the following:
+  - '*bin\\*'
+  - '*\Tools\\*'
+  - '*\SMSComponent\\*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Various applications
