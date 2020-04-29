@@ -9,17 +9,15 @@ Detects a command that deletes all local shadow volume copies as often used by R
 Critical
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on detection of command line instructions:
+  - '\*vssadmin delete shadows\*'
+  - '\*wmic SHADOWCOPY DELETE\*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Adminsitrative scripts - e.g. to prepare image for golden image creation
