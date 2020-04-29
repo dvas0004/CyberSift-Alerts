@@ -9,17 +9,13 @@ Detects invocation of Microsoft Workflow Compiler, which may permit the executio
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on launch of Microsoft.Workflow.Compiler.exe from anywhere in the filesystem.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Legitimate MWC use (unlikely in modern enterprise environments)
