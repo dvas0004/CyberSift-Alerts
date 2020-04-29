@@ -9,17 +9,20 @@ Detects an executable in the users directory started from Microsoft Word, Excel,
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on an executable being run from the C:\\users directory by one of the following parent processes:
+
+  - '*\WINWORD.EXE'
+  - '*\EXCEL.EXE'
+  - '*\POWERPNT.exe'
+  - '*\MSPUB.exe'
+  - '*\VISIO.exe'
+  - '*\OUTLOOK.EXE'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
