@@ -9,17 +9,13 @@ Processes started by MMC could be a sign of lateral movement using MMC applicati
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on cmd.exe being launche as a child-process by mmc.exe and in turn used to run commands, unless that command is RunCmd.cmd
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
