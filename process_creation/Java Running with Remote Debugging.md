@@ -9,17 +9,17 @@ Detects a JAVA process running with remote debugging allowing more than just loc
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on command line instructions containing \*transport=dt_socket,address=\*
+
+unless the value of 'address' is:
+  - 127.0.0.1
+  - localhost
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
