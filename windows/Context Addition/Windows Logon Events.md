@@ -11,7 +11,7 @@ Default windows logon events (ID 4624) are updated with several CyberSift-specif
 -------------------
 ### Detailed Information
 
-![summary_diagram](https://../../../img/WindowsLogonEventContextAddition.jpg)
+![summary_diagram](https://github.com/dvas0004/CyberSift-Alerts/blob/master/img/WindowsLogonEventContextAddition.jpg?raw=true)
 
 #### Field description for Source (where logon request came from (a.k.a “Workstation”)
 
