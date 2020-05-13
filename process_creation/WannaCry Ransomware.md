@@ -7,16 +7,32 @@ Detects WannaCry ransomware activity.
 ### Severity
 
 - Critical
-<!---
+
 -------------------
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
---->
+Triggers on one of the following executables running:
+
+  - '*\tasksche.exe'
+  - '*\mssecsvc.exe'
+  - '*\taskdl.exe'
+  - '*\@WanaDecryptor@*'
+  - '*\WanaDecryptor*'
+  - '*\taskhsvc.exe'
+  - '*\taskse.exe'
+  - '*\111.exe'
+  - '*\lhdfrgui.exe'
+  - '*\diskpart.exe'
+  - '*\linuxnew.exe'
+  - '*\wannacry.exe'
+
+Or one of the following commandline instructions:
+
+  - '*icacls * /grant Everyone:F /T /C /Q*'
+  - '*bcdedit /set {default} recoveryenabled no*'
+  - '*wbadmin delete catalog -quiet*'
+  - '*@Please_Read_Me@.txt*'
+  
 -------------------
 ### Possible causes of false positives
 
