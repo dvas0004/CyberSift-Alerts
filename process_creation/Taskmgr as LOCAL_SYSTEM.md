@@ -9,17 +9,13 @@ Detects the creation of taskmgr.exe process in context of LOCAL_SYSTEM
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers when taskmgr.exe is run under the user NT_AUTHORITY\SYSTEM
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
