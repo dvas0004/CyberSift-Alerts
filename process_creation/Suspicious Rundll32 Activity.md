@@ -9,17 +9,26 @@ Detects suspicious process related to rundll32 based on arguments.
 Medium
 
 -------------------
-<!---
-### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+### Detailed Information
+Triggers on process running fitting one of the following wildcard parameters:
+
+  - '*\rundll32.exe* url.dll,*OpenURL *'
+  - '*\rundll32.exe* url.dll,*OpenURLA *'
+  - '*\rundll32.exe* url.dll,*FileProtocolHandler *'
+  - '*\rundll32.exe* zipfldr.dll,*RouteTheCall *'
+  - '*\rundll32.exe* Shell32.dll,*Control_RunDLL *'
+  - '*\rundll32.exe javascript:*'
+  - '* url.dll,*OpenURL *'
+  - '* url.dll,*OpenURLA *'
+  - '* url.dll,*FileProtocolHandler *'
+  - '* zipfldr.dll,*RouteTheCall *'
+  - '* Shell32.dll,*Control_RunDLL *'
+  - '* javascript:*'
+  - '*.RegisterXLL*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - False positives depend on scripts and administrative tools used in the monitored environment
