@@ -9,17 +9,31 @@ Detects a suspicious child process of a Windows shell.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on one of the following processes:
+
+  - '*\schtasks.exe'
+  - '*\nslookup.exe'
+  - '*\certutil.exe'
+  - '*\bitsadmin.exe'
+  - '*\mshta.exe'
+
+Running with one of the following parent processes (shells):
+
+  - '*\mshta.exe'
+  - '*\powershell.exe'
+  - '*\cmd.exe'
+  - '*\rundll32.exe'
+  - '*\cscript.exe'
+  - '*\wscript.exe'
+  - '*\wmiprvse.exe'
+
+Unless running from the directory: '*\ccmcache\*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Administrative scripts
