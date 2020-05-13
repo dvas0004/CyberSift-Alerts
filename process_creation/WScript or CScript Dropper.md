@@ -9,17 +9,27 @@ Detects wscript/cscript executions of scripts located in user directories.
 - High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on:
+  - '*\wscript.exe'
+  - '*\cscript.exe'
+
+Running with one of the following command line parameters:
+  - '* C:\Users\\*.jse *'
+  - '* C:\Users\\*.vbe *'
+  - '* C:\Users\\*.js *'
+  - '* C:\Users\\*.vba *'
+  - '* C:\Users\\*.vbs *'
+  - '* C:\ProgramData\\*.jse *'
+  - '* C:\ProgramData\\*.vbe *'
+  - '* C:\ProgramData\\*.js *'
+  - '* C:\ProgramData\\*.vba *'
+  - '* C:\ProgramData\\*.vbs *'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Winzip
