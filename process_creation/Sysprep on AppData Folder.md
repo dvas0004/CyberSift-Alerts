@@ -15,7 +15,7 @@ Medium
 Triggers on process 
   - \*\sysprep.exe
   
-Running with folder fitting *\AppData\\* as target.
+Running with folder fitting \*\AppData\\\* as target.
 
 
 -------------------
