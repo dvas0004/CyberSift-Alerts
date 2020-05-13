@@ -12,7 +12,7 @@ High
 
 ### Detailed Information
 
-Triggers on running of the command 'whoami' from windows CMD or Powershell.
+Triggers on running of the command 'whoami' from windows CMD or Powershell, used to identify the user the shell is currently running under.
 
 -------------------
 
