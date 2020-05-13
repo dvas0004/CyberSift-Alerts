@@ -9,17 +9,34 @@ Detects a Windows program executable started in a suspicious folder.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on:
+  - '*\svchost.exe'
+  - '*\rundll32.exe'
+  - '*\services.exe'
+  - '*\powershell.exe'
+  - '*\regsvr32.exe'
+  - '*\spoolsv.exe'
+  - '*\lsass.exe'
+  - '*\smss.exe'
+  - '*\csrss.exe'
+  - '*\conhost.exe'
+  - '*\wininit.exe'
+  - '*\lsm.exe'
+  - '*\winlogon.exe'
+  - '*\explorer.exe'
+  - '*\taskhost.exe' 
 
+Being run from a folder other than:
+  - 'C:\Windows\System32\\*'
+  - 'C:\Windows\SysWow64\\*'
+  - 'C:\Windows\explorer.exe'
+  - 'C:\Windows\winsxs\*'
+  
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Exotic software
