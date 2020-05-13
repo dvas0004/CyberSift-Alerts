@@ -9,17 +9,25 @@ Detects the execution of an executable that is typically used by PlugX for DLL s
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on running of the following executables, except when run from certain directories:
 
+  - '*\CamMute.exe' Unless executed from: '*\Lenovo\Communication Utility\\*'
+  - '*\chrome_frame_helper.exe' Unless executed from: '*\Google\Chrome\application\\*'
+  - '*\dvcemumanager.exe' Unless executed from: '*\Microsoft Device Emulator\\*'
+  - '*\Gadget.exe' Unless executed from: '*\Windows Media Player\\*'
+  - '*\hcc.exe' Unless executed from: '*\HTML Help Workshop\\*'
+  - '*\hkcmd.exe' Unless executed from: '*\System32\\*', '*\SysNative\\*', '*\SysWow64\\*'
+  - '*\Mc.exe' Unless executed from: '*\Microsoft Visual Studio*', '*\Microsoft SDK*', '*\Windows Kit*'
+  - '*\MsMpEng.exe' Unless executed from: '*\Microsoft Security Client\\*', '*\Windows Defender\\*', '*\AntiMalware\\*'
+  - '*\msseces.exe' Unless executed from: '*\Microsoft Security Center\\*', '*\Microsoft Security Client\\*', '*\Microsoft      Security Essentials\\*'
+  - '*\OInfoP11.exe' Unless executed from: '*\Common Files\Microsoft Shared\\*'
+  - '*\OleView.exe' Unless executed from: '*\Microsoft Visual Studio*', '*\Microsoft SDK*', '*\Windows Kit*', '*\Windows Resource Kit\\*'
+  - '*\rc.exe' Unless executed from: '*\Microsoft Visual Studio*', '*\Microsoft SDK*', '*\Windows Kit*', '*\Windows Resource Kit\\*', '*\Microsoft.NET\\*'
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
