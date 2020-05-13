@@ -9,17 +9,14 @@ Detects the creation of a process from Windows task manager.
 Low
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers when a process is run with taskmgr.exe as parent process.
+Does not trigger if the created child process is resmon.exe and mmc.exe
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Administrative activity
