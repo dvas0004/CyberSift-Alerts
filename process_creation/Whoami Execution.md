@@ -9,17 +9,13 @@ Detects the execution of whoami, which is often used by attackers after exloitat
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on running of the command 'whoami' from windows CMD or Powershell.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Admin activity
