@@ -1,7 +1,8 @@
 # Terminal Service Process Spawn
 ### Description
 
-Detects a process spawned by the terminal service server process (this could be an indicator for an exploitation of CVE-2019-0708)
+Detects a process spawned by the terminal service server process.
+(This could be an indicator for an exploitation of CVE-2019-0708)
 
 -------------------
 ### Severity
@@ -12,7 +13,8 @@ Detects a process spawned by the terminal service server process (this could be 
 
 ### Detailed Information
 
-Detects '*\sdbinst.exe' ran with parameters fitting '*\AppPatch\\*}.sdb*'
+Triggers where a process is created having parent process fitting the pattern: '*\svchost.exe*termsvcs'
+If the created process is rdpclip.exe, this rule does not trigger.
 
 -------------------
 
