@@ -9,17 +9,26 @@ Detects certain command line parameters often used during reconnaissance activit
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on one of the following commands being run:
+  - whoami
+  - net user
+  - ping -n
+  - systeminfo
+ 
+ From one of the following parent processes (web shells):
+  - '*\apache*'
+  - '*\tomcat*'
+  - '*\w3wp.exe'
+  - '*\php-cgi.exe'
+  - '*\nginx.exe'
+  - '*\httpd.exe'
+  
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
