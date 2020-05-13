@@ -1,7 +1,7 @@
 # Suspicious XOR Encoded PowerShell Command Line
 ### Description
 
-Detects suspicious powershell process which includes bxor command, alternatvide obfuscation method to b64 encoded commands.
+Detects suspicious powershell process which includes bxor command, alternative obfuscation method to b64 encoded commands.
 
 -------------------
 ### Severity
@@ -9,17 +9,13 @@ Detects suspicious powershell process which includes bxor command, alternatvide 
 - Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on a Powershell command fitting the pattern \* -bxor\*
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
