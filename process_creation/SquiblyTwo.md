@@ -9,17 +9,22 @@ Detects WMI SquiblyTwo Attack with possible renamed WMI by looking for imphash.
 - Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on wmic.exe being run with one of the following parameters:
+  - format:\"http*
+  - /format:'http
+  - /format:http*
+
+To account for the case where wmic.exe has been renamed, the rule will also trigger if the hash of the imports listed in the PE header (the "imphash") of the executable matches one of the following hashes (in addition to being run with one of the above parameters):
+
+  - 1B1A3F43BF37B5BFE60751F2EE2F326E
+  - 37777A96245A3C74EB217308F3546F4C
+  - 9D87C9D67CE724033C0B40CC4CA1B206
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
