@@ -9,17 +9,23 @@ Web servers that spawn shell processes could be the result of a successfully pla
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on one of:
+  - cmd.exe
+  - sh.exe
+  - bash.exe
+  - powershell.exe
+
+Being run with one of:
+  - w3wp.exe
+  - httpd.exe
+  - nginx.exe
+  - php-cgi.exe
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Particular web applications may spawn a shell process legitimately
