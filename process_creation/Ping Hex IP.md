@@ -9,17 +9,13 @@ Detects a ping command that uses a hex encoded IP address.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on ping or ping.exe run with a parameter starting with '0x'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unlikely, because no sane admin pings IP addresses in a hexadecimal form
