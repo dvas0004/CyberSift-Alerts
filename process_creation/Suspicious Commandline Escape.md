@@ -11,9 +11,8 @@ Low
 -------------------
 
 ### Detailed Information
-
 Triggers on command line commands containing:
-  - <TAB>
+  - \<TAB\>
   - ^h^t^t^p
   - h"t"t"p
 
