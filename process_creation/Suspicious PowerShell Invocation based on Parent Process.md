@@ -9,17 +9,14 @@ Detects suspicious powershell invocations from interpreters or unusual programs.
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers when Powershell is invoked by wscript.exe or cscript.exe unless the terminal current directory 
+fits the wildcard pattern '*\Health Service State\\*'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Microsoft Operations Manager (MOM)
