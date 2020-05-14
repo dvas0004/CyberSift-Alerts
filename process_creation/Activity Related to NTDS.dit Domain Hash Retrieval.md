@@ -9,17 +9,19 @@ Detects suspicious commands that could be related to activity that uses volume s
 High
 
 -------------------
-<!---
-### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+### Detailed Information
+Triggers on a command fitting one of the following wildcard patterns being run:
+  - vssadmin.exe Delete Shadows
+  - 'vssadmin create shadow /for=C:'
+  - copy \\?\GLOBALROOT\Device\\*\windows\ntds\ntds.dit
+  - copy \\?\GLOBALROOT\Device\\*\config\SAM
+  - 'vssadmin delete shadows /for=C:'
+  - 'reg SAVE HKLM\SYSTEM '
+  - esentutl.exe /y /vss *\ntds.dit*
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Administrative activity
