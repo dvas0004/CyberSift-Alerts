@@ -10,17 +10,27 @@ the built-in certutil utility.
 High
 
 -------------------
-<!---
-### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+### Detailed Information
+Triggers on certutil being run with one or more of the following command line parameters:
+  - ' -decode '
+  - ' /decode '
+  - ' -decodehex '
+  - ' /decodehex '
+  - ' -urlcache '
+  - ' /urlcache '
+  - ' -verifyctl '
+  - ' /verifyctl '
+  - ' -encode '
+  - ' /encode '
+  - ' -URL'
+  - ' /URL'
+  - ' -ping'
+  - ' /ping'
+
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - False positives depend on scripts and administrative tools used in the monitored environment
