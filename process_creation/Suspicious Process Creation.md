@@ -9,17 +9,61 @@ Detects suspicious process starts on Windows systems based on keywords.
 Medium
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on commandlines fitting one of the following wildcard patterns:
+
+  - vssadmin.exe delete shadows*
+  - vssadmin delete shadows*
+  - vssadmin create shadow /for=C:*
+  - copy \\?\GLOBALROOT\Device\\*\windows\ntds\ntds.dit*
+  - copy \\?\GLOBALROOT\Device\\*\config\SAM*
+  - reg SAVE HKLM\SYSTEM *
+  - reg SAVE HKLM\SAM *
+  - '* sekurlsa:*'
+  - net localgroup adminstrators * /add
+  - net group "Domain Admins" * /ADD /DOMAIN
+  - certutil.exe *-urlcache* http*
+  - certutil.exe *-urlcache* ftp*
+  - netsh advfirewall firewall *\AppData\\*
+  - attrib +S +H +R *\AppData\\*
+  - schtasks* /create *\AppData\\*
+  - schtasks* /sc minute*
+  - '*\Regasm.exe *\AppData\\*'
+  - '*\Regasm *\AppData\\*'
+  - '*\bitsadmin* /transfer*'
+  - '*\certutil.exe * -decode *'
+  - '*\certutil.exe * -decodehex *'
+  - '*\certutil.exe -ping *'
+  - icacls * /grant Everyone:F /T /C /Q
+  - '* wmic shadowcopy delete *'
+  - '* wbadmin.exe delete catalog -quiet*'
+  - '*\wscript.exe *.jse'
+  - '*\wscript.exe *.js'
+  - '*\wscript.exe *.vba'
+  - '*\wscript.exe *.vbe'
+  - '*\cscript.exe *.jse'
+  - '*\cscript.exe *.js'
+  - '*\cscript.exe *.vba'
+  - '*\cscript.exe *.vbe'
+  - '*\fodhelper.exe'
+  - '*waitfor*/s*'
+  - '*waitfor*/si persist*'
+  - '*remote*/s*'
+  - '*remote*/c*'
+  - '*remote*/q*'
+  - '*AddInProcess*'
+  - '* /stext *'
+  - '* /scomma *'
+  - '* /stab *'
+  - '* /stabular *'
+  - '* /shtml *'
+  - '* /sverhtml *'
+  - '* /sxml *'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - False positives depend on scripts and administrative tools used in the monitored environment
