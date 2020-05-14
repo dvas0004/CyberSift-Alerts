@@ -9,17 +9,16 @@ Detects execution of the Notepad++ updater in a suspicious directory, which is o
 High
 
 -------------------
-<!---
-### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+### Detailed Information
+Triggers on gup.exe running from any directory other than those below:
+  - 'C:\Users\*\AppData\Local\Notepad++\updater\gup.exe'
+  - 'C:\Users\*\AppData\Roaming\Notepad++\updater\gup.exe'
+  - 'C:\Program Files\Notepad++\updater\gup.exe'
+  - 'C:\Program Files (x86)\Notepad++\updater\gup.exe'
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Execution of tools named GUP.exe and located in folders different than Notepad++\updater
