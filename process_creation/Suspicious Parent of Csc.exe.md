@@ -9,17 +9,13 @@ Detects a suspicious parent of csc.exe, which could by a sign of payload deliver
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on csc.exe running with wscript.exe, cscript.exe, mshta.exe
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
