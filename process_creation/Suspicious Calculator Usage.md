@@ -9,17 +9,13 @@ Detects suspicious use of calc.exe with command line parameters or in a suspicio
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on calc.exe being run from any directory with command line parameters or from any directory other than System32 or SysWOW64
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
