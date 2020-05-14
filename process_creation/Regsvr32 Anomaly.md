@@ -9,17 +9,17 @@ Detects various anomalies in relation to regsvr32.exe
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
-
+Triggers where: 
+  - regsvr32.exe is run from a directory fitting \*\\Temp\\\*
+  - with powershell.exe as parent process.
+  - wscript.exe is run with regsvr32.exe as parent process
+  - regsvr32.exe is used to install scrobj.dll from an http or ftp server
+  - regsvr32.exe is run from commandline with excel.exe as parent process
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
