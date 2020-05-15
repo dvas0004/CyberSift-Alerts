@@ -10,14 +10,9 @@ Critical
 
 -------------------
 ### Detailed Information
-<!---
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
---->
-Requires Sysmon config with Imphash logging activated.
+
+Triggers on creation of a file stream containing an executable.
+The rule identifies whether the stream contains an executable or not by applying imphash (hash of imports inside PE header of executable) to the contents of the filestream. If imphash is not '00000000000000000000000000000000' (null imphash) the rule does not trigger.
 
 -------------------
 ### Possible causes of false positives
