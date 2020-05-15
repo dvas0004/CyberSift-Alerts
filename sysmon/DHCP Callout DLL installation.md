@@ -10,17 +10,14 @@ which can be used to execute code in context of the DHCP server (restart require
 High
 
 -------------------
-<!---
-### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+### Detailed Information
+Triggers on setting of one of the following registry keys:
+  - \Services\DHCPServer\Parameters\CalloutDlls
+  - \Services\DHCPServer\Parameters\CalloutEnabled
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
