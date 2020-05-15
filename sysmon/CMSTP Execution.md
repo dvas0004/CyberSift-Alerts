@@ -9,17 +9,13 @@ Detects various indicators of Microsoft Connection Manager Profile Installer exe
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on cmmgr32.exe added to a new or existing registry value or a process accessing cmlua.dll.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Legitimate CMSTP use (unlikely in modern enterprise environments)
