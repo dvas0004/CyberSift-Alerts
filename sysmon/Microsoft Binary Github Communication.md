@@ -9,17 +9,19 @@ Detects an executable in the Windows folder accessing github.com
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on Sysmon event "Network connection" (ID 3) where the DestinationHostname field fits:
+  - '*.github.com'
+  - '*.githubusercontent.com'
+<br>AND<br>
+the Image field fits 'C:\Windows\\*' (ie: the process executable making the connection is inside the Windows directory)
+
+
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - 'Unknown'
