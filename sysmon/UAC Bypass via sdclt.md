@@ -11,7 +11,8 @@ High
 -------------------
 ### Detailed Information
 
-Target Object: 'HKEY_USERS\\*\Classes\exefile\shell\runas\command\isolatedCommand'
+Triggers on Sysmon event ID 13 (RegistryEvent) where TargetObject attribute fits:
+  - 'HKEY_USERS\\*\Classes\exefile\shell\runas\command\isolatedCommand'
 
 -------------------
 ### Possible causes of false positives
