@@ -9,17 +9,13 @@ Detects the execution of a renamed PsExec often used by attackers or malware.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on Sysmon event where attribute 'Description' has value : 'Execute processes remotely' and Product has value : 'Sysinternals PsExec'  and 'Image' (originating process) is NOT 'PsExec.exe'.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Software that illegaly integrates PsExec in a renamed form
