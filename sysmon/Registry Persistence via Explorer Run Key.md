@@ -9,17 +9,21 @@ Detects a possible persistence mechanism using RUN key for Windows Explorer and 
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on Sysmon event RegistryEvent (Value Set) (ID 13) where 'TargetObject' event attribute (the Registry key being set) fits the wildcard pattern: '*\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run' and the 'Details' attribute (The Registry value being set) fits one of:
+  - 'C:\Windows\Temp\\*'
+  - 'C:\ProgramData\\*'
+  - '*\AppData\\*'
+  - 'C:\$Recycle.bin\\*'
+  - 'C:\Temp\\*'
+  - 'C:\Users\Public\\*'
+  - 'C:\Users\Default\\*'
+
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
