@@ -9,17 +9,13 @@ Detects process access to LSASS which is typical for Mimikatz (0x1000 PROCESS_QU
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on Sysmon Event ID 10 (ProcessAccess) where process accessed is lsass.exe and Granted Acces is '0x410'.
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
