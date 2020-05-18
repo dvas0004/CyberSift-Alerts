@@ -9,17 +9,15 @@ Detects UAC bypass method using Windows event viewer.
 Critical
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on: 
+  - Sysmon Event RegistryEvent (Event ID 13) where TargetObject value fits: 'HKEY_USERS\\*\mscfile\shell\open\command'
+  - Sysmon Event Process creation (Event ID 1) where Parent process is eventvwr.exe and process name is not mmc.exe
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
