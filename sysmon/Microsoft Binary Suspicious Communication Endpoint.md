@@ -10,10 +10,11 @@ High
 
 -------------------
 ### Detailed Information
-
-Destination Hostnames 
+Triggers on Sysmon Event ID 3 (Network connection) where DestinationHostname fits one of:
   - '*dl.dropboxusercontent.com'
   - '*.pastebin.com'
+<br>AND<br>
+Image field fits: 'C:\Windows\*' (ie: connecting process is an executable inside the Windows directory)
 
 -------------------
 ### Possible causes of false positives
