@@ -9,17 +9,19 @@ Detects the addition of a SSP to the registry. Upon a reboot or API call, SSP DL
 Critical
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on Sysmon Event RegistryEvent (Value Set) (ID 13) where 'TargetObject' has one of the following values:
+  - 'HKLM\System\CurrentControlSet\Control\Lsa\Security Packages'
+  - 'HKLM\System\CurrentControlSet\Control\Lsa\OSConfig\Security Packages'
+
+And where 'Image' (process from which events originates)
+  - Image: C:\Windows\system32\msiexec.exe
+  - Image: C:\Windows\syswow64\MsiExec.exe
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unlikely
