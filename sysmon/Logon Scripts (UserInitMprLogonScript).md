@@ -9,17 +9,22 @@ Detects creation or execution of UserInitMprLogonScript persistence method.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
-
+Triggers when:
+  - process is created with userinit.exe as parent image unless process is explorer.exe created usingmnetlogon.bat script
+OR
+  - Process is created (sysmon event id 1)
+  - File is created (sysmon event id 11)
+  - Registry Object Created Or Deleted (event id 12)
+  - Registry Value Set (event id 13)
+  - Registry Key renamed (event id 14)
+  AND
+  - The command causing one or more of the above contains the keyword UserInitMprLogonScript.
+  
 -------------------
---->
+
 ### Possible causes of false positives
 
 - exclude legitimate logon scripts
