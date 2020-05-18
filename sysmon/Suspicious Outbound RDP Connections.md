@@ -9,17 +9,29 @@ Detects Non-Standard Tools Connecting to TCP port 3389 indicating possible later
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
-
+Triggers on Sysmon Event 'Network Connection' (ID 3) where DestinationPort equals 3389 and connecting process (Image attribute) is one of:
+  - '*\mstsc.exe'
+  - '*\RTSApp.exe'
+  - '*\RTS2App.exe'
+  - '*\RDCMan.exe'
+  - '*\ws_TunnelService.exe'
+  - '*\RSSensor.exe'
+  - '*\RemoteDesktopManagerFree.exe'
+  - '*\RemoteDesktopManager.exe'
+  - '*\RemoteDesktopManager64.exe'
+  - '*\mRemoteNG.exe'
+  - '*\mRemote.exe'
+  - '*\Terminals.exe'
+  - '*\spiceworks-finder.exe'
+  - '*\FSDiscovery.exe'
+  - '*\FSAssessment.exe'
+  - '*\MobaRTE.exe'
+  - '*\chrome.exe'
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Other Remote Desktop RDP tools
