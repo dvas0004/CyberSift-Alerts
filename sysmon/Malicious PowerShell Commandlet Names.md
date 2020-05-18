@@ -11,7 +11,7 @@ High
 -------------------
 ### Detailed Information
 
-Commandlets:
+Triggers on creation of one or more of the following:
  - '*\Invoke -DllInjection.ps1'   
  - '*\Invoke -WmiCommand.ps1'
  - '*\Get -GPPPassword.ps1'
