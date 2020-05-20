@@ -9,17 +9,17 @@ Detects changes to RDP terminal service sensitive settings.
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on sysmon event 'RegistryEvent (Value Set)' (Event ID 13) where TargetObject (ie: the registry key being set) fits one of:
+  - '*\services\TermService\Parameters\ServiceDll*'
+  - '*\Control\Terminal Server\fSingleSessionPerUser*'
+  - '*\Control\Terminal Server\fDenyTSConnections*'
+
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
