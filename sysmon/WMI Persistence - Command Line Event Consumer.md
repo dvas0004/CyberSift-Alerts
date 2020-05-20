@@ -9,17 +9,12 @@ Detects WMI command line event consumers.
 High
 
 -------------------
-<!---
-### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+### Detailed Information
+Triggers on sysmon event 'Image loaded' (event id 7) where 'Image' is 'C:\Windows\System32\wbem\WmiPrvSE.exe' and 'ImageLoaded' (ie: the DLL loaded by WmiPrvSE.exe) is 'wbemcons.dll'.  
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown (data set is too small; further testing needed)
