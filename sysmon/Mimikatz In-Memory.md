@@ -10,8 +10,10 @@ Medium
 
 -------------------
 ### Detailed Information
-
-DLLS:
+Triggers on Sysmon event 'Image loaded' (event id 7) where rundll32.exe loads one of:
+  - vaultcli.dll
+  - wlanapi.dll
+  and not one of:
   - 'ntdsapi.dll'
   - 'netapi32.dll'
   - 'imm32.dll'
@@ -22,6 +24,8 @@ DLLS:
   - 'ntasn1.dll'
   - 'cryptdll.dll'
   - 'logoncli.dll'
+
+Within a 30 second timeframe.
 
 -------------------
 ### Possible causes of false positives
