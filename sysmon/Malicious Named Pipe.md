@@ -10,7 +10,8 @@ Critical
 
 -------------------
 ### Detailed Information
-  Named Pipes
+Triggers on Sysmon events 'Pipe created' (event id 17) and 'Pipe connected' (event id 18).
+Triggers on creation on one of the following Named Pipes ('NamedPipe' attribute):
          - '\isapi_http'  # Uroburos Malware Named Pipe
          - '\isapi_dg'  # Uroburos Malware Named Pipe
          - '\isapi_dg2'  # Uroburos Malware Named Pipe
