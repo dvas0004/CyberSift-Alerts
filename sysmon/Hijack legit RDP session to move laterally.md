@@ -9,17 +9,13 @@ Detects the usage of tsclient share to place a backdoor on the RDP source machin
 High
 
 -------------------
-<!---
+
 ### Detailed Information
 
-- Why is this alert triggered?
-- What are the typical causes that generate this alert? (e.g. port scans, unusual file access activity, etc...)
-- Which corroborating information should be looked up?
-- Any supporting queries to get more information?
-- Any supporting visualizations to get more information?
+Triggers on sysmon event FileCreate (event id 11) where the 'TargetFileName' attribute (ie: the path of the file created) fits '*\Microsoft\Windows\Start Menu\Programs\Startup\*' 
 
 -------------------
---->
+
 ### Possible causes of false positives
 
 - Unknown
