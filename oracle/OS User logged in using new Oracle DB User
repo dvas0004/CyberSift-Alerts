@@ -1,0 +1,23 @@
+#OS User logged in using new Oracle DB User
+##Description
+An OS User logged in with a DB User that they had not previously used.
+
+It is important to make the distinction between the Oracle audit concepts of "Current User" and "DB User".
+
+The "DB User" is the Oracle account with which the user has logged into the DBMS in the session in question.
+The "Current User" is the Oracle account whose privileges are currently in effect.
+
+For example: If a user is logged into the DBMS with "Account A", and runs an SQL command, both the DB User and Current User would be "Account A".
+If a user on the other hand logged into the DBMS with "Account A" and ran a stored procedure owned by "Account B" (and thus having that account's privileges), the DB User would still be "Account A",
+but the "Current User" would be set to "Account B" as the stored procedure will have run with that user's privileges.
+
+
+-------------------
+###Severity
+Medium
+
+-------------------
+
+### Possible causes of false positives
+- Currently, these alerts are not distinguishing between "Current User" and "DB User", and are firing when it is only the "Current User" which is unusual.
+Thus we are receiving these alerts when an OS user logs with a normal DB User, and then runs a stored procedure owned by a user which is "unusual".
